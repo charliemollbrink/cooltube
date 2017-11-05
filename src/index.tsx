@@ -4,6 +4,6 @@ import * as ReactDOM from "react-dom";
 import { App } from "./components/app";
 
 ReactDOM.render(
-    <App name="CATS CATS CATS" />,
+    <App name="One Cool Cat" />,
     document.getElementById("root")
 );
