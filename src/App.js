@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import logo from './logo.svg';
-import './App.css';
+import './styles/styles.css';
+import './styles/index.css';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div = className="green-yellow">
         <header>
           <ul>
               <li><Link to="/">Home</Link></li>
@@ -41,7 +41,7 @@ const About = () =>
 {
     return (
         <div>
-            <h2>ABOUT ME</h2>
+            <h2 className="{styles.header}">ABOUT ME</h2>
 
             <p>Cras facilisis urna ornare ex volutpat, et
                 convallis erat elementum. Ut aliquam, ipsum vitae

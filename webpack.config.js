@@ -10,7 +10,7 @@ module.exports = {
 
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: [".ts", ".tsx", ".js", ".json"]
+        extensions: [".ts", ".tsx", ".js", ".json", ".css", ".less"]
     },
 
     module: {
@@ -22,7 +22,9 @@ module.exports = {
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
 
             { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-            { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
+            { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
+            { test: /\.css$/, loader: "style-loader!css-loader" },
+            { test: /\.less$/, loader: "style-loader!css-loader!less-loader"}
         ]
     },
 

@@ -1,5 +1,7 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import '../styles/styles.css';
+
 
 export interface AppProps { name: string; }
 
@@ -7,7 +9,7 @@ export class App extends React.Component<AppProps, {}> {
     render() {
         return <Router>
             <div>
-                <header>
+                <header className="header">
                     <h1>{this.props.name}</h1>
                     <ul>
                         <li><Link to="/">Home</Link></li>
