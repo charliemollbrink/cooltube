@@ -1,0 +1,38 @@
+body {
+  background-color: #eefffa;
+  padding: 20px;
+  margin: 0;
+  color: #001d1f;
+  font-family: 'Raleway', sans-serif;
+}
+h1,
+h2 {
+  font-family: 'Alice', serif;
+}
+ul.header {
+  background-color: #111;
+  padding: 0;
+}
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.header li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+.menu {
+  background-color: #FFF;
+  padding: 20px;
+}
+.menu h2 {
+  padding: 0;
+  margin: 0;
+}
+.menu li {
+  margin-bottom: 10px;
+}

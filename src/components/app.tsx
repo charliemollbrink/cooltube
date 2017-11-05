@@ -1,6 +1,7 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import '../styles/styles.css';
+import '../styles/fonts.css';
+import '../styles/styles.less';
 
 
 export interface AppProps { name: string; }
@@ -8,8 +9,8 @@ export interface AppProps { name: string; }
 export class App extends React.Component<AppProps, {}> {
     render() {
         return <Router>
-            <div>
-                <header className="header">
+            <div className="menu">
+                <header>
                     <h1>{this.props.name}</h1>
                     <ul>
                         <li><Link to="/">Home</Link></li>
@@ -56,7 +57,7 @@ const About = () =>
 const Contact = () => {
     return (
         <div>
-            <h2>ABOUT ME</h2>
+            <h2>CONTACT</h2>
 
             <p>som sorta contactform</p>
         </div>
