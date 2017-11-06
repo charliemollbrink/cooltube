@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 import '../styles/fonts.css';
 import '../styles/styles.less';
 
@@ -8,26 +8,29 @@ export interface AppProps { name: string; }
 
 export class App extends React.Component<AppProps, {}> {
     render() {
-        return <Router>
-            <div className="menu">
-                <header>
-                    <ul>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/blog">Blog</Link></li>
-                        <li><Link className="menu__index" to="/">{this.props.name}</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li><Link to="/direction">Direction</Link></li>
-                    </ul>
-                </header>
-                <main>
-                    <Route exact={true} path="/" component={Home}/>
-                    <Route path="/about" component={About} />
-                    <Route path="/blog" component={Blog} />
-                    <Route path="/contact" component={Contact} />
-                    <Route path="/directions" component={Directions} />
-                </main>
-            </div>
-            </Router>;
+        return (
+                <div>
+                    <header>
+                        <ul className="nav" >
+                            <li className="nav__item"><Link to="/about">About</Link></li>
+                            <li className="nav__item"><Link to="/blog">Blog</Link></li>
+                            <li className="nav__item nav__item--index"><Link to="/">{this.props.name}</Link></li>
+                            <li className="nav__item"><Link to="/contact">Contact</Link></li>
+                            <li className="nav__item"><Link to="/directions">Directions</Link></li>
+                        </ul>
+                    </header>
+                    <main>
+                        <Switch>
+                            <Route exact={true} path="/" component={Home}/>
+                            <Route path="/about" component={About} />
+                            <Route path="/blog" component={Blog} />
+                            <Route path="/contact" component={Contact} />
+                            <Route path="/directions" component={Directions} />
+                        </Switch>
+                    </main>
+                </div>
+
+        );
     }
 }
 const Home = () =>
@@ -73,7 +76,7 @@ const Blog = () =>
                 </p>
             </article>
             <article>
-                <h2>Blog Post #2</h2>
+                <h2>Blog Post #1</h2>
 
                 <p>Cras facilisis urna ornare ex volutpat, et
                 convallis erat elementum. Ut aliquam, ipsum vitae

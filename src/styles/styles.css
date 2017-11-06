@@ -7,18 +7,22 @@ body {
 }
 h1,
 h2 {
-  font-family: 'Alice', serif;
+  font-family: 'Indie Flower', serif;
 }
-.menu {
+header {
+  margin-bottom: 20px;
+}
+header .nav {
   background-color: rgba(255, 255, 255, 0.6);
-  padding: 20px;
+  padding: 0;
+  margin: 0 auto;
+  width: 700px;
 }
-.menu li {
-  margin-bottom: 10px;
+header .nav__item {
   display: inline-block;
   list-style-type: none;
 }
-.menu li a {
+header .nav__item a {
   font-family: 'Raleway', sans-serif;
   font-size: 12px;
   text-transform: uppercase;
@@ -28,11 +32,13 @@ h2 {
   font-style: normal;
   line-height: 1em;
   padding: 10px;
+  margin: 10px;
   color: rgba(0, 0, 0, 0.6);
 }
-.menu li a:hover {
+header .nav__item a:hover {
   color: #000000;
 }
-.menu li a.menu__index {
+header .nav__item--index a {
   font-size: 20px;
+  font-family: 'Indie Flower', cursive;
 }

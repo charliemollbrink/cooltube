@@ -9,31 +9,39 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 h1,h2 {
-  font-family: 'Alice', serif;
+  font-family: 'Indie Flower', serif;
 }
-.menu {
-  background-color: rgba(255, 255, 255, 0.6);;
-  padding: 20px;
-  li {
-    margin-bottom: 10px;
-    display: inline-block;
-    list-style-type: none;
-    a {
-      font-family: 'Raleway', sans-serif;
-      font-size: 12px;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 2px;
-      font-weight: 400;
-      font-style: normal;
-      line-height: 1em;
-      padding: 10px;
-      color: rgba(0, 0, 0, 0.6);
-      &:hover{
-        color: rgb(0, 0, 0);
+header{
+  margin-bottom: 20px;
+  .nav {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0;
+    margin: 0 auto;
+    width: 700px;
+    &__item {
+      display: inline-block;
+      list-style-type: none;
+      a {
+        font-family: 'Raleway', sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1em;
+        padding: 10px;
+        margin: 10px;
+        color: rgba(0, 0, 0, 0.6);
+        &:hover {
+          color: rgb(0, 0, 0);
+        }
       }
-      &.menu__index{
-        font-size: 20px;
+      &--index {
+        a {
+          font-size: 20px;
+          font-family: 'Indie Flower', cursive;
+        }
       }
     }
   }
