@@ -1,5 +1,5 @@
 body {
-  background-color: #eefffa;
+  background-color: #d5dfe0;
   padding: 20px;
   margin: 0;
   color: #001d1f;
@@ -10,10 +10,11 @@ h2 {
   font-family: 'Indie Flower', serif;
 }
 header {
+  background-color: rgba(255, 255, 255, 0.6);
   margin-bottom: 20px;
+  height: 200px;
 }
 header .nav {
-  background-color: rgba(255, 255, 255, 0.6);
   padding: 0;
   margin: 0 auto;
   width: 700px;
@@ -41,4 +42,13 @@ header .nav__item a:hover {
 header .nav__item--index a {
   font-size: 20px;
   font-family: 'Indie Flower', cursive;
+}
+main {
+  background-color: #d5dfe0;
+  background: filter-gradient(#cdd5d8, #d5dfe0, vertical);
+  background: background-image(linear-gradient(top, #cdd5d8 0%, #d5dfe0 100%));
+}
+footer {
+  height: 600px;
+  background: no-repeat bottom / 100% url("../assets/thomas-verbruggen-94814_1920.jpg");
 }

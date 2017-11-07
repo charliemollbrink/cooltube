@@ -28,6 +28,12 @@ export class App extends React.Component<AppProps, {}> {
                             <Route path="/directions" component={Directions} />
                         </Switch>
                     </main>
+                    <footer>
+                       <span className="footer__contact">
+                           <span className="footer__contact__email">email@onecoolcat.io</span>
+                           <span className="footer__contact__phone">0110-010101010</span>
+                       </span>
+                    </footer>
                 </div>
 
         );
