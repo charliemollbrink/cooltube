@@ -6,7 +6,7 @@ import { App } from "./components/app";
 
 ReactDOM.render((
         <Router>
-            <App name="One Cool Cat" />
+            <App name="coolTube" />
         </Router>
     ), document.getElementById('root')
 );

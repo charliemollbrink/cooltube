@@ -49,6 +49,5 @@ main {
   background: background-image(linear-gradient(top, #cdd5d8 0%, #d5dfe0 100%));
 }
 footer {
-  height: 600px;
-  background: no-repeat bottom / 100% url("../assets/thomas-verbruggen-94814_1920.jpg");
+  height: 200px;
 }
