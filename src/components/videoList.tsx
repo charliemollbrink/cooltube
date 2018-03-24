@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from 'react-router-dom';
-import { Video } from "./video";
+import { Video } from './video';
 
 const videoList = require("../data/videoList.json");
 
@@ -10,26 +10,24 @@ export interface VideoListProps {
 
 export class VideoList extends React.Component<VideoListProps, {}> {
   render() {
-    let rows = [];
-    //console.log(Object.entries(videoList)[items]);
+    let rows = [], props;
     for (let i = 0; i < videoList.items.length; i++) {
-      const props = {
+      props = {
+        title: videoList.items[i].snippet.title,
         videoUrl: 'https://www.youtube.com/watch?v=' + videoList.items[i].id,
-        thumbnail : videoList.items[i].snippet.thumbnails.medium.url
-
+        thumbnail : videoList.items[i].snippet.thumbnails.medium.url,
       }
-
-      rows.push(<Video videoUrl={props.videoUrl} thumbnail={props.thumbnail} key={i}/>);
+      rows.push(
+            <li>
+              <Link to={"video/" + videoList.items[0].id}>
+                <Video videoUrl={props.videoUrl} thumbnail={props.thumbnail}
+                title={props.title} key={i}/>
+              </Link>
+            </li>);
     };
     return (
         <ul>
-          <li>
-            <Link to={"video/" + videoList.items[0].id}>
-              <article>
-                {rows}
-              </article>
-            </Link>
-          </li>
+          {rows}
         </ul>
       );
     }

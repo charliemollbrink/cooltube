@@ -1,7 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
-import { VideoList } from "./videoList";
-import { Video } from "./video";
+import { VideoList } from './videoList';
+import { Video } from './video';
 
 import '../styles/fonts.css';
 import '../styles/styles.less';
@@ -11,7 +11,7 @@ export interface AppProps { name: string; }
 export class App extends React.Component<AppProps, {}> {
     render() {
         return (
-                <div>
+                <div className="container">
                   <header>
                     <nav className="navbar navbar-default">
                       <div className="container-fluid">

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Permanent+Marker');
+
 @backgroundColorLight: #cdd5d8;
 @backgroundColor: #d5dfe0;
 @textColor: #001d1f;
@@ -12,7 +14,18 @@ body {
 h1,h2 {
   font-family: 'Indie Flower', serif;
 }
-header{
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5,25%);
+  grid-template-rows: 25% auto;
+  grid-template-areas:
+      "header header header header header"
+      ". title video video ."
+}
+
+header {
+  grid-area: header;
   background-color: rgba(255, 255, 255, 0.6);
   margin-bottom: 20px;
   height: 200px;
@@ -48,8 +61,16 @@ header{
     }
   }
 }
+article {
+  .video--description {
+    grid-area: title
+  }
+  .video--player {
+    grid-area: video;
+  }
+}
 
-main{
+main {
   background-color: @backgroundColor;
   background: filter-gradient(@backgroundColorLight, @backgroundColor, vertical);
   background: background-image(linear-gradient(top, @backgroundColorLight 0%, @backgroundColor 100%));
